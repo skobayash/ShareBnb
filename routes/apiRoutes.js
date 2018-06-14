@@ -96,11 +96,31 @@ module.exports = function (app) {
   var lastRowId;
 
 
+  // app.post("/upload", function (req, res) {
+  //   console.log("HEREREREER")
+  //   var picPath = req.files.file.path;
+
+  //   // console.log(req.user.id);
+  //   db.Asset.create({
+  //     UserId: req.user.id,
+  //     image_url_1: picPath
+  //   }).then(function (asset) {
+  //     console.log(asset);
+  //     res.json(asset);
+
+  //     console.log(picPath);
+
+  //     lastRowId = asset.dataValues.id;
+  //     console.log(lastRowId);
+
+  //   });
+  // });
+
   app.post("/upload", function (req, res) {
     console.log("HEREREREER")
     var picPath = req.files.file.path;
 
-    // console.log(req.user.id);
+    console.log("This is the error: ", req.user.id);
     db.Asset.create({
       UserId: req.user.id,
       image_url_1: picPath
