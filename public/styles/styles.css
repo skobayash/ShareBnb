@@ -86,3 +86,32 @@ h6 {
 .aForm {
   margin-bottom: 0px;
 }
+
+#hp-numbering {
+  color: #6d6d6d;
+  font-weight: 300;
+  
+}
+
+#hp-numbering::first-letter {
+  color: #6d6d6d;
+  font-size: 45px;
+  font-family: 'Sunflower', sans-serif;
+}
+
+#topheader .navbar-nav li > a {
+	text-transform: capitalize;
+	color: #333;
+	transition: background-color .2s, color .2s;
+	
+	&:hover,
+	&:focus {
+		background-color: #333;
+		color: #fff;
+	}
+}
+
+#topheader .navbar-nav li.active > a {
+	background-color: #333;
+	color: #fff;
+}

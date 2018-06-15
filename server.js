@@ -10,6 +10,11 @@ var passport = require("./config/passport");
 
 var db = require("./models");
 
+var handlebars = require('handlebars');
+var helpers = require('handlebars-helpers')({
+  handlebars: handlebars
+});
+
 var app = express();
 var PORT = process.env.PORT || 3000;
 

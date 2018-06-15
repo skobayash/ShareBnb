@@ -32,9 +32,10 @@ module.exports = function (app) {
       password: req.body.password
 
     }).then(function (user) {
-      // res.redirect(307, "/api/signup");
-      res.json(user)
-      // res.render('/members')
+      res.redirect(307, "/members");
+      // res.json(user)
+      // res.render('/members');
+      // res.redirect("/members");
     }).catch(function (err) {
       console.log(err);
 
